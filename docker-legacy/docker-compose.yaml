@@ -197,7 +197,7 @@ services:
       NOTION_CLIENT_ID: you-client-id
       NOTION_INTERNAL_SECRET: you-internal-secret
       # The sandbox service endpoint.
-      CODE_EXECUTION_ENDPOINT: "http://sandbox:8194"
+      CODE_EXECUTION_ENDPOINT: http://sandbox:8194
       CODE_EXECUTION_API_KEY: dify-sandbox
       CODE_MAX_NUMBER: 9223372036854775807
       CODE_MIN_NUMBER: -9223372036854775808
@@ -207,8 +207,8 @@ services:
       CODE_MAX_OBJECT_ARRAY_LENGTH: 30
       CODE_MAX_NUMBER_ARRAY_LENGTH: 1000
       # SSRF Proxy server
-      SSRF_PROXY_HTTP_URL: 'http://ssrf_proxy:3128'
-      SSRF_PROXY_HTTPS_URL: 'http://ssrf_proxy:3128'
+      SSRF_PROXY_HTTP_URL: http://ssrf_proxy:3128
+      SSRF_PROXY_HTTPS_URL: http://ssrf_proxy:3128
       # Indexing configuration
       INDEXING_MAX_SEGMENTATION_TOKENS_LENGTH: 4000
     depends_on:
@@ -491,8 +491,8 @@ services:
       GIN_MODE: 'release'
       WORKER_TIMEOUT: 15
       ENABLE_NETWORK: 'true'
-      HTTP_PROXY: 'http://ssrf_proxy:3128'
-      HTTPS_PROXY: 'http://ssrf_proxy:3128'
+      HTTP_PROXY: http://ssrf_proxy:3128
+      HTTPS_PROXY: http://ssrf_proxy:3128
       SANDBOX_PORT: 8194
     volumes:
       - ./volumes/sandbox/dependencies:/dependencies
